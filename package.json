@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anges244/evie.git"
+    "url": "git@github.com:MirzaMBaig/manchiAppsWebsite.git"
   },
   "keywords": [
     "design",
@@ -22,12 +22,8 @@
     "sass",
     "html5"
   ],
-  "author": "Aggelos Gesoulis <aggelos.gesoulis@gmail.com>",
+  "author": "Aggelos Gesoulis <aggelos.gesoulis@gmail.com>, mirza",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/anges244/evie/issues"
-  },
-  "homepage": "https://github.com/anges244/evie#readme",
   "dependencies": {
     "ejs": "^2.5.7",
     "express": "^4.16.2",
