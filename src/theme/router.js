@@ -3,7 +3,6 @@ const docsRouter = express.Router();
 
 //--- Documentation pages
 docsRouter.get('/', (req,res) => res.render('index'));
-docsRouter.get('/docs', (req,res) => res.render('docs'));
 docsRouter.get('/services', (req,res) => res.render('services'));
 docsRouter.get('/pages', (req,res) => res.render('pages'));
 docsRouter.get('/components', (req,res) => res.render('components'));

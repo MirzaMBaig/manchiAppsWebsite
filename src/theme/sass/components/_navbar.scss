@@ -1,160 +1,160 @@
-.navbar{
+.navbar {
 	position: fixed;
 	z-index: 100;
 	width: 100%;
-	background-color: $primary;
+	background-color: #192a7e;
 	transition: 0.7s;
-
-	&--nofixed{
-		position: relative;
-		z-index: 3;
-	}
-}
-
-.navbar__inner{
+  }
+  .navbar--nofixed {
+	position: relative;
+	z-index: 3;
+  }
+  
+  .navbar__inner {
+	-js-display: flex;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: $navbar-height;
+	height: 60px;
 	color: #fff;
 	transition: 0.7s;
-}
-
-// Content
-.navbar__logo{
+  }
+  
+  .navbar__logo {
 	font-size: 1.325rem;
+	padding-left: 40px;
+	// background-image: url("/images/logo.svg");
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
 	transition: 0;
 	color: #fff;
 	text-decoration: none;
-}
-
-.navbar__menu{
+  }
+  
+  .navbar__menu {
 	display: none;
-
-	&--noMob{
-		display: block;
-	}
-
-	@include desktop{
-		display: block;
-	}
-
-	li{
-		margin-left: 4pt;
-		backface-visibility: hidden;
-    	display: inline-block;
-
-		@include desktop{
-			margin-left: 16pt;
-		}
-	}
-
-	a{
-		color: #fff;
-		@include desktop{
-			opacity: 0.75;
-
-			&:hover{
-				opacity: 1;
-			}
-
-			&:after {
-				display:block;
-				content: '';
-				border-bottom: solid 1px #fff;  
-				transform: scaleX(0);  
-				transition: transform 250ms ease-in-out;
-			}
-
-			&:hover:after { transform: scaleX(1); }	
-		}
-	}
-}
-
-.navbar__menu-mob{
+  }
+  .navbar__menu--noMob {
 	display: block;
-
-	&--noMob{
-		display: none;
+  }
+  @media (min-width: 992px) {
+	.navbar__menu {
+	  display: block;
 	}
-
-	@include desktop{
-		display: none;
+  }
+  .navbar__menu li {
+	margin-left: 4pt;
+	backface-visibility: hidden;
+	display: inline-block;
+  }
+  @media (min-width: 992px) {
+	.navbar__menu li {
+	  margin-left: 16pt;
 	}
-}
-
-/*--- Extended and transparent version ---*/
-.navbar--extended{
-	background-color: transparent;
-	
-	.navbar__inner{
-		height: $navbar-height;
-		color: $hero-color; // Since this is transparent whatever color is used in the hero, fits here
+  }
+  .navbar__menu a {
+	color: #fff;
+  }
+  @media (min-width: 992px) {
+	.navbar__menu a {
+	  opacity: 0.75;
 	}
-}
-
-/*! responsive-nav.js 1.0.39 by @viljamis */
-
-.nav__mobile ul {
+	.navbar__menu a:hover {
+	  opacity: 1;
+	}
+	.navbar__menu a:after {
+	  display: block;
+	  content: "";
+	  border-bottom: solid 1px #fff;
+	  transform: scaleX(0);
+	  transition: transform 250ms ease-in-out;
+	}
+	.navbar__menu a:hover:after {
+	  transform: scaleX(1);
+	}
+  }
+  
+  .navbar__menu-mob {
+	display: block;
+  }
+  .navbar__menu-mob--noMob {
+	display: none;
+  }
+  @media (min-width: 992px) {
+	.navbar__menu-mob {
+	  display: none;
+	}
+  }
+  
+  /*--- Extended and transparent version ---*/
+  .navbar--extended {
+	background-color: #192a7e;
+  }
+  .navbar--extended .navbar__inner {
+	height: 60px;
+	color: #ffffff;
+  }
+  
+  /*! responsive-nav.js 1.0.39 by @viljamis */
+  .nav__mobile ul {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	display: block;
 	list-style: none;
-	background-color: $background-dark;
+	background-color: #333c44;
 	color: #fff;
-}
-
-.nav__mobile li {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1em 0;
-  display: block;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-
-  &:last-child{
-  	border-bottom: none;
   }
-}
-
-.js .nav__mobile {
-  clip: rect(0 0 0 0);
-  max-height: 0;
-  position: absolute;
-  display: block;
-  overflow: hidden;
-  zoom: 1;
-}
-
-.nav__mobile.opened {
-  max-height: 9999px;
-}
-
-.nav-toggle {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-
-@include desktop{
+  
+  .nav__mobile li {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1em 0;
+	display: block;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .nav__mobile li:last-child {
+	border-bottom: none;
+  }
+  
   .js .nav__mobile {
-    position: relative;
+	clip: rect(0 0 0 0);
+	max-height: 0;
+	position: absolute;
+	display: block;
+	overflow: hidden;
+	zoom: 1;
   }
-  .js .nav__mobile.closed {
-    max-height: none;
+  
+  .nav__mobile.opened {
+	max-height: 9999px;
   }
+  
   .nav-toggle {
-    display: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
   }
-}
-
-#toggle svg{
+  
+  @media (min-width: 992px) {
+	.js .nav__mobile {
+	  position: relative;
+	}
+	.js .nav__mobile.closed {
+	  max-height: none;
+	}
+	.nav-toggle {
+	  display: none;
+	}
+  }
+  
+  #toggle svg {
 	height: 1.2em;
 	width: 1.2em;
 	vertical-align: middle;
-}
+  }

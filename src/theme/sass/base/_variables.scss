@@ -1,5 +1,5 @@
 // Colors
-$primary: #6C63FF;
+$primary: #192a7e;
 $secondary: #4641FF;
 $accent: #06d19c;
 $primary-dark: darken($primary,8%);
@@ -25,7 +25,7 @@ $radius: 30px;
 
 // Containers
 $containerWidth: 88%; // Percentage of screen width
-$containerMax: 1080px; // Largest fixed width
+$containerMax: 1200px; // Largest fixed width
 $text-container: 640px; // Limit texts for readability
 
 // Media queries
@@ -37,7 +37,7 @@ $huge-width: 1400px !default; // Large Desktops
 
 // Navigation bar
 $navbar-height: 60px; // Height for navigation globally
-$navbar-height-extended: 70px; // Extended height for navigation => Used on landing
+$navbar-height-extended: 60px; // Extended height for navigation => Used on landing
 
 // Hero
 $hero-color: $background;

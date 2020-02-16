@@ -1,7 +1,7 @@
 {
-  "name": "evie",
-  "version": "0.2.12",
-  "description": "A design system & template to build modern applications that work everywhere",
+  "name": "manchiapps",
+  "version": "0.0.1",
+  "description": "Manchi Apps offcial website",
   "main": "app.js",
   "scripts": {
     "start": "gulp",
@@ -22,7 +22,7 @@
     "sass",
     "html5"
   ],
-  "author": "Aggelos Gesoulis <aggelos.gesoulis@gmail.com>, mirza",
+  "author": "Aggelos Gesoulis, Mirza",
   "license": "MIT",
   "dependencies": {
     "ejs": "^2.5.7",
