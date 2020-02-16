@@ -4,7 +4,7 @@ const path = require('path');
 const morgan = require('morgan');
 const docsRouter = require('./src/docs/router');
 // MODE CHANGER: Change this global to switch to docs mode
-global.docsMode = true;
+global.docsMode = false;
 
 // Convert assets location based on what type of gulp task we are running
 app.locals.asset = function(assetLocation, assetTheme){ return assetLocation; }
@@ -17,6 +17,7 @@ if (!global.docsMode){
 	app.use(express.static(path.join(__dirname, 'src/theme/public/')));
 	app.use(express.static(path.join(__dirname, 'src/theme/assets')));
 	app.use(morgan('tiny'));
+	app.use(docsRouter);
 } else {
 	// Documentation pages
 	app.set('views', [path.join(__dirname, 'src/docs/')]);
@@ -25,13 +26,6 @@ if (!global.docsMode){
 	app.use(morgan('tiny'));
 	app.use(docsRouter);
 }
-
-
-// Theme pages
-app.get('/', (req,res) => res.render('index')); // Landing page
-app.get('/auth', (req,res) => res.render('auth')); // Authentication page
-app.get('/page', (req,res) => res.render('page')); // Plain page
-app.get('/dashboard', (req,res) => res.render('dashboard')); // Dashboard page
 
 
 

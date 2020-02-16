@@ -1,136 +1,179 @@
-.hero{
+.hero {
+	background-size: 100%;
+	background-position: center 60px;
+	background-repeat: no-repeat;
+	// background-image: url(../images/hero.jpg);
 	position: relative;
 	width: 100%;
-	background-image: url("../images/evie_default_bg.jpeg");
-	box-shadow: $hero-shadow;
-	background-size: cover; 
-	background-position: center center;
-	background-repeat: no-repeat;
-	color: $hero-color;
-
-	&__inner{
-		position: relative;
-		z-index: 3;
-	}
-}
-
-// Hero overlays
-// It contains two divs between the image and the content
-// The one is the SVG mask and the second one a colored overlay with high opacity
-
-// Color overlay
-.hero__overlay{
+	//background-color: #051b21;
+	color: #444444;
+	height: 550px;
+  }
+  
+  .hero__inner {
+	position: relative;
+	z-index: 3;
+  }
+  
+  .hero__overlay {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	opacity: $hero-color-opacity;
+	opacity: 0;
 	z-index: 1;
-	background-color: $primary;
-}
-
-.hero__overlay--gradient{
-	background: linear-gradient(to right, $primary, $secondary);
-}
-
-.hero__overlay--gradientVertical{
-	background: linear-gradient(to bottom, $primary, $secondary);
-}
-
-// Mask
-.hero__mask{
+	background-color: #6c63ff;
+  }
+  
+  .hero__overlay--gradient {
+	background: linear-gradient(to right, #6c63ff, #4641ff);
+  }
+  
+  .hero__overlay--gradientVertical {
+	background: linear-gradient(to bottom, #6c63ff, #4641ff);
+  }
+  
+  .hero__mask {
 	position: absolute;
 	height: 100%;
 	width: 100%;
 	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080"><defs><linearGradient id="06714b97-aec8-4b7e-bf3d-1e20f95f612e" y1="809.5" x2="958" y2="809.5" gradientTransform="matrix(1, 0, 0, -1, 0, 1082)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0.05"/></linearGradient></defs><title>hero</title><rect id="0567095b-2cf7-4407-b8ab-ec2abe52d830" data-name="&lt;Path&gt;" y="545" width="1920" height="535" fill="#fff" opacity="0.05" style="isolation:isolate"/><polygon id="82ca9a61-a0a1-49cc-9805-a3533c693bad" data-name="&lt;Path&gt;" points="958 545 0 545 0 0 770.96 0 958 545" fill="url(#06714b97-aec8-4b7e-bf3d-1e20f95f612e)"/></svg>');
-	background-size: cover; 
+	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-	opacity: $hero-mask-opacity;
+	opacity: 0.66;
 	z-index: 2;
-}
-
-// Actual content
-.hero__content{
+  }
+  
+  .hero__content {
+	-js-display: flex;
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: calc( 100vh - 50px );
-	padding: calc( #{$navbar-height + 24pt}) 0; // Padding added to avoid overlapping with fixed navigation bars
+	align-items: left;
+	justify-content: left;
+	min-height: calc(80vh - 100px);
+	padding: calc(60px) 0;
 	overflow: auto;
-	
-	// This div allows normal behaviors for contained elements instead of flexbox aligning them 
-	&__inner{
-		width: 100%;
-		max-width: 600px;
-		text-align: center;
+  }
+  
+  .hero__content p {
+	font-size: 1.3rem;
+	line-height: 25px;
+  }
+  
+  .hero__content__inner {
+	width: 100%;
+	max-width: 600px;
+	text-align: left;
+	color: white;
+  }
+  
+  /*--- CONTENT STYLING ---*/
+  .hero__title {
+	// color: white;
+	font-size: 4rem;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	margin: 0.8em 0;
+  }
+
+  .hero__title--sub {
+	// color: white;
+	font-size: 2rem;
+	font-family: "Roboto", sans-serif;
+	font-weight: 200;
+	margin: 0.8em 0;
+  }
+
+  /* .hero__title:before {
+	content: "";
+	display: block;
+	width: 48%;
+	padding-top: 25px;
+	border-top: 3px solid white;
+  } */
+  .hero__image__inner {
+	width: 100%;
+	max-width: 600px;
+	text-align: right;
+	color: white;
+  }
+
+  .hero__image_svg {
+	margin: 1.6em 0;
+	width: 80%;
+  }
+
+  @media (min-width: 992px) {
+	.hero__image_svg {
+		margin: 3.2em 0;
 	}
-}
+  }
 
-/*--- CONTENT STYLING ---*/
-.hero__title{
-	color: inherit;
-	margin-bottom: 1.25em;
-}
-
-.hero__text{
+  @media (max-width: 505px) {
+	.hero__image_svg {
+		display: none;
+	}
+  }
+  
+  @media (min-width: 992px) {
+	.hero__title {
+	  font-size: 4rem;
+	}
+  }
+  
+  .hero__text {
 	opacity: 0.85;
 	line-height: 1.7;
 	text-align: left;
 	font-size: 1.1em;
-}
+  }
+  
+  .hero .button {
+	margin: 12pt 0pt;
+  }
 
-.hero .button{
-	margin: 12pt 8pt;
-}
-
-.hero__button{
-	color: $hero-color;
-	border-color: $hero-color;
-
-	@include desktop{
-		&:hover{
-			color: darken($hero-color,11%);
-			border-color: darken($hero-color,11%);
-		}
+  .hero__title 
+  .hero__button {
+	color: white;
+	background-color: #6967f6;
+	border-color: #6967f6;
+  }
+  @media (min-width: 992px) {
+	.hero__button:hover {
+	  color: #e3e3e3;
+	  border-color: #e3e3e3;
 	}
-}
-
-// Sub-hero
-.hero__sub{
+  }
+  
+  .hero__sub {
+	-js-display: flex;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: left;
+	align-items: left;
 	height: 50px;
-}
-
-.hero__sub__down{
-	width: $hero-down-size;
-	height: $hero-down-size;
-	color: $text;
+  }
+  
+  .hero__sub__down {
+	width: 1rem;
+	height: 1rem;
+	color: #666;
 	transition: 0.7s;
 	cursor: pointer;
-
-	@include desktop{
-		&:hover{
-			color: $primary;
-		}
+  }
+  @media (min-width: 992px) {
+	.hero__sub__down:hover {
+	  color: #6c63ff;
 	}
-}
-
-#scrollToNext{
+  }
+  
+  #scrollToNext {
 	transition: 0.7s;
-}
-
-
-/*--- MODIFICATIONS ---*/
-
-// With the class "hero-full" the white line between the hero gets hidden and the hero expands
-.hero--full{
-	.hero__content{
-		min-height: 100vh;
-	}
-}
-
-.hero--full + .hero__sub{
+  }
+  
+  /*--- MODIFICATIONS ---*/
+  .hero--full .hero__content {
+	min-height: 100vh;
+  }
+  
+  .hero--full + .hero__sub {
 	display: none;
-}
+  }
