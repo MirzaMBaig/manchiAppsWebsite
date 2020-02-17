@@ -10,68 +10,25 @@
 </head>
 <body>
 	<% include ./partials/nav %>
-	<!-- Hero unit -->
-	<div class="hero">
-		<div class="hero__overlay hero__overlay--gradient"></div>
-		<div class="hero__mask"></div>
-			<div class="hero__inner">
-				<div class="container">
-					<div class="hero__content">
-						<div class="hero__content__inner" id='navConverter'>
-							<h1 class="hero__title">Digital Transformation </br>& Consulting Services</h1>
-							<h2 class="hero__title--sub">We combine user experience, technology and data to create smart applications for your business</h2>
-						</div> 
-						<div class="hero__image__inner">
-							<img class="hero__image_svg" alt="Digital Transformation women image" src="./images/hero.svg">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
-	<!-- Steps -->
-	<div class="steps landing__section">
-		<div class="container">
-			<h2>Who can use Evie?</h2>
-			<p>Here's who we can think of, but surely creative people will surprise us.</p>
-		</div>
-		<div class="container">
-			<div class="steps__inner">
-				<div class="step">
-					<div class="step__media">
-						<img src="./images/undraw_designer.svg" class="step__image">
-					</div>
-					<h4>Programmers</h4>
-					<p class="step__text">A landing page for your open source projects. Present your solution, easily create docs.</p>
-				</div>
-				<div class="step">
-					<div class="step__media">
-						<img src="./images/undraw_responsive.svg" class="step__image">
-					</div>
-					<h4>Designers</h4>
-					<p class="step__text">A website for your own freebies. Let the world download and use your artwork.</p>
-				</div>
-				<div class="step">
-					<div class="step__media">
-						<img src="./images/undraw_creation.svg" class="step__image">
-					</div>
-					<h4>Makers</h4>
-					<p class="step__text">A great starting point for your web application. Focus on your idea and execution.</p>
-				</div>
-			</div>
-		</div>
-	</div>
+	<% include ./partials/header_launch_page %>
+
+	<% include ./partials/what_we_do %>
+
 	<!-- Expanded sections -->
 	<div class="expanded landing__section">
 		<div class="container">
 			<div class="expanded__inner">
 				<div class="expanded__media">
-					<img src="./images/undraw_browser.svg" class="expanded__image">
+					<img src="./images/agile.svg" class="expanded__image">
 				</div>
 				<div class="expanded__content">
-					<h2 class="expanded__title">Natural styling with almost nothing to learn</h2>
-					<p class="expanded__text">Evie brings you the pages you'll need and the structure to create your own, without a learning curve. It is minimal and mostly styles plain elements. There are only a few classes you'll need to know but nothing to disrupt your preferred coding style.</p>
+					<h2 class="expanded__title">Agile Mindset</h2>
+					<p class="expanded__text">Agile Mindset is more about attitude and viewpoints. These include Respect, Collaboration, Improvement Cycle, Learning Cycle, Pride in Ownership, Focus on Delivering Value,  Ability to Adapt to Change.
+						It is pragmatic and action-oriented more than a theoretical philosophy. Agile of course is more than mindset as it includes different values,
+						principles, and practices but waht is important is the human intelligence, the sensibility, and the values that are driving those processes, practices, and systems.
+				
+					</p>
 				</div>
 			</div>
 		</div>
@@ -80,11 +37,15 @@
 		<div class="container">
 			<div class="expanded__inner">
 				<div class="expanded__media">
-					<img src="./images/undraw_frameworks.svg" class="expanded__image">
+					<img src="./images/open_source.svg" class="expanded__image">
 				</div>
 				<div class="expanded__content">
-					<h2 class="expanded__title">Framework agnostic. Your front-end setup, your choice.</h2>
-					<p class="expanded__text">Evie has zero dependencies and uses vanilla JavaScript for a few functions with minimal footprint. You can use React, Vue, Angular, jQuery or whatever you prefer.</p>
+					<h2 class="expanded__title">Open source technologies</h2>
+					<p class="expanded__text">As many big companies are open sourcing their softwares why not utilize already developed, tested and ever evolving open sourced products.
+						With the help of microservices we can easily plug and play with these technologies.
+						We can help you using open source technoligies and make customised products.
+						Its very cost effective way to transform you business for you digital strategy.
+					</p>
 				</div>
 			</div>
 		</div>
@@ -93,11 +54,15 @@
 		<div class="container">
 			<div class="expanded__inner">
 				<div class="expanded__media">
-					<img src="./images/together.svg" class="expanded__image">
+					<img src="./images/goals.svg" class="expanded__image">
 				</div>
 				<div class="expanded__content">
-					<h2 class="expanded__title">Ready for production or rapid prototyping</h2>
-					<p class="expanded__text">Landing, authentication and a few other pages to select from, despite the small size. Tested on production at unDraw with amazing speeds and unopinionated on how to structure your project. We really hope you'll find it awesome and useful!</p>
+					<h2 class="expanded__title">Don't jump straight in</h2>
+					<p class="expanded__text">Don't jump straight in. Take a stratergic and wise decision. We help you to build rapid prototyping.
+						These are very cost effective way of starting a project. 
+						Then we make MVP(minimum viable product) so that it starts you journey of Digital Transformation. 
+						After that when your company is adapted to the product we can enhance the product for growth of your company.
+					</p>
 				</div>
 			</div>
 		</div>
@@ -107,8 +72,7 @@
 		<div class="container">
 			<div class="cta__inner">
 				<h2 class="cta__title">Get started now</h2>
-				<p class="cta__sub cta__sub--center">Grab the production version and begin your project instantly.</p>
-				<a href="#" class="button button__accent">Download Evie</a>
+				<a href="/services" class="button button__accent">Contact Us</a>
 			</div>
 		</div>
 	</div>
@@ -116,32 +80,14 @@
 	<div class="footer footer--dark">
 		<div class="container">
 			<div class="footer__inner">
-				<a href='/' class="footer__textLogo">Evie theme</a>
+				<a href='/' class="footer__textLogo">manchi Apps</a>
 				<div class="footer__data">
 					<div class="footer__data__item">
-						<div class="footer__row">
-							Created by <a href="https://twitter.com/ninalimpi" target="_blank" class="footer__link">Katerina Limpitsouni</a>
-						</div>
-						<div class="footer__row">
-						Code/design by <a href="https://twitter.com/anges244" target="_blank" class="footer__link">Aggelos Gesoulis</a>
-						</div>
-					</div>
-					<div class="footer__data__item">
-						<div class="footer__row">Created for <a href="https://undraw.co" target="_blank" class="footer__link">unDraw</a>
-						</div>
-					</div>
-					<div class="footer__data__item">
 					<div class="footer__row">
-						<a href="https://github.com/anges244/evie" target="_blank" class="footer__link">GitHub</a>
+						<a href="https://github.com/mirzaMBaig" target="_blank" class="footer__link">GitHub</a>
 					</div>
 					<div class="footer__row">
-						<a href="https://twitter.com/undraw_co" target="_blank" class="footer__link">Twitter</a>
-					</div>
-					<div class="footer__row">
-						<a href="https://www.facebook.com/undraw.co/" target="_blank" class="footer__link">Facebook</a>
-					</div>
-					<div class="footer__row">
-						<a href="/additional" class="footer__link">MIT license</a>
+						<a href="https://twitter.com/mmabaig18" target="_blank" class="footer__link">Twitter</a>
 					</div>
 				</div>
 			</div>
